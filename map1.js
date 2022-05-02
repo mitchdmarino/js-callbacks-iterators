@@ -35,8 +35,13 @@ let forecast = [
         low: 54,
     },
 ]
-
+const weather = function(today) {
+    let dayOfWeek = today.day
+    let high = today.high
+    let low = today.low
+    return `${dayOfWeek} will have a high of ${high}F and a low of ${low}F.`
+}
 // Build an array of strings using the forecast objects above with the following pattern:
 // "Monday will have a high of 55F and a low of 53F."
-
+console.log(forecast.map(weather))
 //Your code here
